@@ -3,11 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { BrowserRouter } from 'react-router-dom';
+import 'admin-lte/dist/css/adminlte.min.css'
+import 'admin-lte/dist/js/adminlte'
+import 'admin-lte/plugins/jquery/jquery.min.js'
+import 'admin-lte/plugins/bootstrap/js/bootstrap.bundle.min.js'
 
 ReactDOM.render(
-  <React.StrictMode>
+  <BrowserRouter>
     <App />
-  </React.StrictMode>,
+  </BrowserRouter>,
   document.getElementById('root')
 );
 
