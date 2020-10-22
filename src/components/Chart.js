@@ -13,7 +13,7 @@ export default function Chart() {
 
     useEffect(() => {
         async function fetchData() {
-            const students = await axios.get('http://localhost:8080/students');
+            const students = await axios.get('https://test-backend-cybertory.herokuapp.com/students');
             setAllData(students.data);
             setMath1(allData.filter((obj) => obj.subject === "Math I").length);
             setMath2(allData.filter((obj) => obj.subject === "Math II").length);

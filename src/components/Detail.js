@@ -7,7 +7,7 @@ export default function Detail() {
     const [student, setStudent] = useState([]);
     useEffect(() => {
         async function fecthData() {
-            await axios.get(`http://localhost:8080/student/${id}`)
+            await axios.get(`https://test-backend-cybertory.herokuapp.com/student/${id}`)
                 .then(res => setStudent(res.data))
                 .catch(err => console.log(err))
         }

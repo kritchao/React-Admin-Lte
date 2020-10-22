@@ -15,7 +15,7 @@ export default function Register() {
             department: department,
             subject: subject
         }
-        axios.post('http://localhost:8080/register', body)
+        axios.post('https://test-backend-cybertory.herokuapp.com/register', body)
             .then(res => alert(res.data.message)).catch(e => alert(e.response.data.message))
     }
 

@@ -7,7 +7,7 @@ export default function RegisterList() {
     const [index, setIndex] = useState("")
 
     async function fetchData() {
-        const students = await axios.get('http://localhost:8080/students');
+        const students = await axios.get('https://test-backend-cybertory.herokuapp.com/students');
         setAllData(students.data);
     }
 
@@ -16,7 +16,7 @@ export default function RegisterList() {
     }, [])
 
     const deleteItem = async (id) => {
-        await axios.delete(`http://localhost:8080/student/${id}`);
+        await axios.delete(`https://test-backend-cybertory.herokuapp.com/student/${id}`);
         fetchData();
     }
     return (
